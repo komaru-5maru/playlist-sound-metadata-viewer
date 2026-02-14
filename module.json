@@ -1,0 +1,35 @@
+{
+  "id": "metadata-inspector",
+  "title": "Audio Metadata Inspector",
+  "description": "プレイリストのサウンド設定ダイアログにID3タグ情報を表示します。ApplicationV2対応版。",
+  "version": "2.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Your Name",
+      "discord": "yourname#0000"
+    }
+  ],
+  "scripts": [
+    "lib/jsmediatags.min.js",
+    "metadata-inspector.js"
+  ],
+  "styles": [],
+  "languages": [],
+  "esmodules": [],
+  "relationships": {
+    "requires": [],
+    "conflicts": []
+  },
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": "",
+  "changelog": "CHANGELOG.md"
+}
