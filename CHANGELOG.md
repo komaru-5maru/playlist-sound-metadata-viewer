@@ -2,10 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [2.1.1] - 2026-02-15
 
-## [2.0.0] - 2026-02-15
+### Added
+- デバッグモード機能を追加（設定で有効化可能）
+- scene-bgm-managerと同様のログシステムを実装
+- エラーメッセージの改善（ID3タグがない場合の説明を追加）
+
+### Changed
+- ES Modules化（import/export使用）
+- ファイル構造をscripts/フォルダに整理
+- クラスベースの設計に変更
+- FVTT v13の`path`プロパティに対応（`src`から変更）
+- URLエンコード処理を修正（二重エンコードの問題を解決）
+- データ属性名を`metadata-loaded`から`metadataLoaded`に変更（JavaScript dataset互換性）
+
+### Fixed
+- プレイリストサイドバーでのセレクタ修正（`li.sound`に対応）
+- サウンド設定ダイアログでのメタデータ表示
+- ホバーツールチップの表示
+- 説明欄への転記機能
+
+## [2.0.2] - 2026-02-15
 
 ### Changed
 - **BREAKING**: Foundry VTT v13 ApplicationV2対応に完全移行
