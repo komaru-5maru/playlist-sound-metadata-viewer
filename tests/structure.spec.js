@@ -25,12 +25,23 @@ describe('Module Structure Check', () => {
         const jsonPath = resolve(process.cwd(), 'module.json');
         const moduleJson = JSON.parse(readFileSync(jsonPath, 'utf8'));
 
-        // manifestの中で scripts/module.js が指定されているかチェック
-        // (Foundry VTT v12/13 の esmodules 形式を想定)
         const hasMainScript = moduleJson.esmodules?.some(m => m.path === 'scripts/module.js') || 
                               moduleJson.scripts?.some(s => s === 'scripts/module.js');
         
-        // もし module.json でパスを書き換え忘れていたらここで気づけます
         expect(hasMainScript, 'module.json 内のスクリプトパスが scripts/module.js になっていません').toBe(true);
+    });
+
+    // ✨ ここに追加：バージョンの書き換え忘れ防止テスト
+    it('module.json のバージョンがタグ（GITHUB_REF_NAME）と一致していること', () => {
+        const jsonPath = resolve(process.cwd(), 'module.json');
+        const moduleJson = JSON.parse(readFileSync(jsonPath, 'utf8'));
+        
+        // GitHub Actions 実行時、GITHUB_REF_NAME には 'v2.1.7' などのタグ名が入る
+        const tag = process.env.GITHUB_REF_NAME;
+
+        if (tag && tag.startsWith('v')) {
+            const expectedVersion = tag.replace('v', ''); // 'v2.1.7' -> '2.1.7'
+            expect(moduleJson.version, `タグは ${tag} ですが、module.json の version は ${moduleJson.version} のままです！`).toBe(expectedVersion);
+        }
     });
 });
