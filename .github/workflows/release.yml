@@ -1,27 +1,44 @@
-name: Publish Release
+name: Release Module
 
 on:
   push:
     tags:
-      - 'v*' # v1.0.0 のようなタグがプッシュされた時のみ実行
+      - 'v*' # v1.0.0 のようなタグが打たれた時に実行
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm install
+      
+      # .spec.js (Vitest) だけを実行し、構造ミスがあればここで停止
+      - name: Run Structure Test
+        run: npm test
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    # タグが打たれた時のみ実行（二重チェック）
+    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
 
       # 1. 配布用のzipファイルを作成
-      # 不要なファイル（tests, .github, node_modules等）を除外して固めます
       - name: Zip Files
         run: |
           zip -r ./playlist-sound-metadata-viewer.zip . \
-          -x "*.git*" "node_modules/*" "tests/*" ".github/*" ".gitignore" "*.test.js" "playwright-report/*" "test-results/*"
+          -x "*.git*" "node_modules/*" "tests/*" ".github/*" ".gitignore" "*.spec.js" "*.e2e.test.js" "playwright-report/*" "test-results/*" "vitest.config.js"
 
       # 2. GitHub Release を作成し、zipをアップロード
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2 # 最新版(v2)への更新を推奨
         with:
           files: |
             ./playlist-sound-metadata-viewer.zip
