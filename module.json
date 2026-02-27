@@ -2,7 +2,7 @@
   "id": "playlist-sound-metadata-viewer",
   "title": "Playlist Sound Metadata Viewer",
   "description": "Display ID3 metadata tags for playlist sounds",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
