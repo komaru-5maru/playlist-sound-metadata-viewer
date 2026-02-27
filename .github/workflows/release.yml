@@ -1,0 +1,32 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*' # v1.0.0 のようなタグがプッシュされた時のみ実行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. 配布用のzipファイルを作成
+      # 不要なファイル（tests, .github, node_modules等）を除外して固めます
+      - name: Zip Files
+        run: |
+          zip -r ./playlist-sound-metadata-viewer.zip . \
+          -x "*.git*" "node_modules/*" "tests/*" ".github/*" ".gitignore" "*.test.js" "playwright-report/*" "test-results/*"
+
+      # 2. GitHub Release を作成し、zipをアップロード
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./playlist-sound-metadata-viewer.zip
+          # タグ名（v1.0.1など）をリリース名にする
+          name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

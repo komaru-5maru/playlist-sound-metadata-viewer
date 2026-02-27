@@ -9,7 +9,19 @@
   },
   "authors": [
     {
-      "name": "Your Name"
+      "name": "komaru_5maru"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "languages/ja.json"
     }
   ],
   "scripts": [
@@ -17,5 +29,8 @@
   ],
   "esmodules": [
     "scripts/module.js"
-  ]
+  ],
+  "url": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer",
+  "manifest": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer/releases/latest/download/module.json",
+  "download": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer/releases/latest/download/module.zip"
 }

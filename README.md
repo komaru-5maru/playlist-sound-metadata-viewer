@@ -1,100 +1,37 @@
 # Playlist Sound Metadata Viewer
+A Foundry VTT module that displays and exports ID3 metadata tags (Title, Artist, Album) for audio files in your playlists.
 
-Foundry VTT v13向けのオーディオメタデータ表示モジュールです。
+## Features
+- **Metadata Inspection:** Automatically reads and displays ID3 tags directly in the Playlist Sound Configuration dialog.
+- **Bulk Export:** Adds buttons to the Playlist Directory footer to export metadata for all sounds to the clipboard in Markdown format.
+- **Clean Export Option:** Provides a "Clean" export mode that excludes items with unknown metadata to keep your lists tidy.
+- **Localization Support:** Fully compatible with English and Japanese environments.
+- **v13 Ready:** Optimized for the latest Foundry VTT v13 API and Node.js environments.
 
-## 機能
+## How to Use
+1. **View Metadata:** Open any Sound Configuration in a Playlist. A new "Metadata" section will appear below the source path.
+2. **Export All:** Click the "Export Metadata" button at the bottom of the Playlist Directory. The formatted list will be copied to your clipboard.
 
-- **プレイリストサイドバーでのホバー表示**: サウンドアイテムにマウスをホバーすると、ID3タグ情報（タイトル、アーティスト、アルバム）をツールチップで表示
-- **サウンド設定ダイアログでの詳細表示**: サウンド設定画面でメタデータを詳細表示
-- **説明欄への自動転記**: ワンクリックでメタデータを説明欄に転記可能
-- **デバッグモード**: トラブルシューティング用の詳細ログ出力機能
+## Requirements
+- Foundry VTT v13+
+- Internet connection (for initial loading of the jsmediatags library via CDN).
 
-## 対応バージョン
+--------------------------------------------------------------------------------
 
-- Foundry VTT v13以降（ApplicationV2対応）
+# プレイリスト・サウンド・メタデータ・ビューア
+プレイリスト内のオーディオファイルからID3メタデータ（タイトル、アーティスト、アルバム）を読み取り、表示およびエクスポートするためのFoundry VTTモジュールです。
 
-## インストール
+## 主な機能
+- **メタデータの確認:** プレイリストのサウンド設定ダイアログ内に、ID3タグ情報を自動的に読み込んで表示します。
+- **一括エクスポート:** プレイリストディレクトリの下部に、全サウンドのメタデータをMarkdown形式でクリップボードに書き出すボタンを追加します。
+- **クリーンエクスポート:** メタデータが不明な項目を除外して書き出すオプションにより、整理されたリストを作成できます。
+- **多言語対応:** 英語および日本語環境に完全対応しています。
+- **v13 対応:** 最新の Foundry VTT v13 API および Node.js 実行環境に最適化されています。
 
-1. モジュールディレクトリに配置
-2. Foundry VTTを再起動
-3. ゲームワールド内でモジュールを有効化
+## 使い方
+1. **メタデータの確認:** プレイリスト内のサウンド設定を開きます。ソースパスの下に「メタデータ情報」セクションが表示されます。
+2. **一括エクスポート:** プレイリストタブの下部にある「メタデータをエクスポート」ボタンをクリックします。整形されたテキストがクリップボードにコピーされます。
 
-## 使用方法
-
-### プレイリストサイドバー
-
-1. プレイリストサイドバーを開く
-2. サウンドアイテムにマウスをホバー
-3. メタデータがツールチップで表示されます
-
-### サウンド設定ダイアログ
-
-1. サウンドアイテムを右クリックして「設定」を選択
-2. 「オーディオメタデータ」セクションが表示されます
-3. 「説明欄にメタ情報を転記」ボタンで説明欄に情報をコピーできます
-
-### デバッグモード
-
-トラブルシューティングが必要な場合：
-
-1. ゲーム設定 → モジュール設定 → Playlist Sound Metadata Viewer
-2. 「デバッグログを出力する」をONにする
-3. F12キーでブラウザのコンソールを開く
-4. `[Metadata Viewer]`で始まる詳細なログが表示されます
-
-## 技術仕様
-
-- **依存ライブラリ**: jsmediatags (BSD-3-Clause)
-- **対応フォーマット**: MP3のID3タグ
-- **権限**: GM権限を持つユーザーのみ動作
-- **アーキテクチャ**: ES Modules使用
-
-## ファイル構成
-
-```
-playlist-sound-metadata-viewer/
-├── lib/
-│   └── jsmediatags.min.js (ダミーファイル)
-├── scripts/
-│   ├── module.js (メインエントリーポイント)
-│   ├── settings.js (設定登録)
-│   ├── utils.js (ユーティリティ関数)
-│   ├── metadata-reader.js (メタデータ読み取り)
-│   └── hooks.js (フック処理)
-├── module.json
-├── README.md
-├── CHANGELOG.md
-└── LICENSE
-```
-
-## 制限事項
-
-- HTTPで配信されているリモートファイルには対応していません
-- ID3タグが存在しないファイルでは情報が表示されません
-
-## トラブルシューティング
-
-### メタデータが表示されない
-
-1. デバッグモードを有効にする
-2. コンソールログを確認
-3. 以下を確認：
-   - GMとしてログインしているか
-   - 音声ファイルがローカルパスか
-   - ID3タグが埋め込まれているか
-
-### ライブラリ読み込みエラー
-
-- CDNからjsmediatagsが読み込めない場合、インターネット接続を確認してください
-
-## ライセンス
-
-MIT License
-
-## 変更履歴
-
-詳細は [CHANGELOG.md](CHANGELOG.md) を参照してください。
-
-## クレジット
-
-- **jsmediatags**: https://github.com/aadsm/jsmediatags
+## 必要条件
+- Foundry VTT v13以上
+- インターネット接続（jsmediatags ライブラリをCDN経由でロードするために必要です）。

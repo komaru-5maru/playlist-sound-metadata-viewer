@@ -1,14 +1,10 @@
 /**
  * Playlist Sound Metadata Viewer - Metadata Reader
- * メタデータ読み取りクラス
  */
 
 export class MetadataReader {
     static libraryLoaded = false;
 
-    /**
-     * jsmediatagsライブラリを動的に読み込む
-     */
     static async loadLibrary() {
         if (this.libraryLoaded || window.jsmediatags) {
             this.libraryLoaded = true;
@@ -47,9 +43,9 @@ export class MetadataReader {
             window.jsmediatags.read(fullPath, {
                 onSuccess: (tag) => {
                     resolve({
-                        title: tag.tags.title || "不明なタイトル",
-                        artist: tag.tags.artist || "不明なアーティスト",
-                        album: tag.tags.album || "不明なアルバム"
+                        title: tag.tags.title || game.i18n.localize("PSMV.UnknownTitle"),
+                        artist: tag.tags.artist || game.i18n.localize("PSMV.UnknownArtist"),
+                        album: tag.tags.album || game.i18n.localize("PSMV.UnknownAlbum")
                     });
                 },
                 onError: (error) => {
