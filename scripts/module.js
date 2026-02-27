@@ -1,6 +1,6 @@
 /**
  * Playlist Sound Metadata Viewer for Foundry VTT v13
- * * @version 2.1.6
+ * * @version 2.1.7
  * @author komaru_5maru
  */
 
