@@ -23,8 +23,9 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: ./playlist-sound-metadata-viewer.zip
-          # タグ名（v1.0.1など）をリリース名にする
+          files: |
+            ./playlist-sound-metadata-viewer.zip
+            ./module.json
           name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false

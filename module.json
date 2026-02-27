@@ -2,7 +2,7 @@
   "id": "playlist-sound-metadata-viewer",
   "title": "Playlist Sound Metadata Viewer",
   "description": "Display ID3 metadata tags for playlist sounds",
-  "version": "2.1.1",
+  "version": "2.1.5",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -32,5 +32,5 @@
   ],
   "url": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer",
   "manifest": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer/releases/latest/download/module.json",
-  "download": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer/releases/latest/download/module.zip"
+  "download": "https://github.com/komaru-5maru/playlist-sound-metadata-viewer/releases/latest/download/playlist-sound-metadata-viewer.zip"
 }
