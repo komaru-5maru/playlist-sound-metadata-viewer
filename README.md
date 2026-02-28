@@ -1,11 +1,12 @@
 # Playlist Sound Metadata Viewer
 
+![Foundry v13](https://img.shields.io/badge/Foundry-v13-informational)
+[![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on%20Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/komarutrpg)
+[![OFUSE](https://img.shields.io/badge/OFUSE-59B9C6?logo=ofuse&logoColor=white)](https://ofuse.me/o?uid=99781)
+
 <p align="center">
   <img src="Github_Social_Preview.jpg" alt="Playlist Sound Metadata Viewer" width="600">
 </p>
-
-* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
-* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
 
 Hi, I'm Komaru, a TRPG enthusiast and developer.
 I create modules to make our sessions more enjoyable!

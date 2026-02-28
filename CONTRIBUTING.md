@@ -38,8 +38,8 @@ Currently, **I am NOT accepting Pull Requests (code contributions), custom featu
 コードの修正は受けられませんが、使ってみた感想や「便利だった！」というお声は大変励みになります。
 もしこのモジュールを気に入っていただけて、「コーヒー一杯くらい奢ってもいいよ」という方がいらっしゃいましたら、以下のリンクから応援いただけると泣いて喜びます！
 
-* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
-* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
+[![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on%20Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/komarutrpg)
+[![OFUSE](https://img.shields.io/badge/OFUSE-59B9C6?logo=ofuse&logoColor=white)](https://ofuse.me/o?uid=99781)
 
 リポジトリへの **Star ⭐** をいただけるだけでも、開発の大きな励みになります！
 
@@ -47,7 +47,7 @@ Currently, **I am NOT accepting Pull Requests (code contributions), custom featu
 While I cannot accept code contributions, your feedback and "Thank you" messages are greatly appreciated! 
 If you find this module useful and would like to support my work (e.g., "buy me a coffee"), you can do so through the links below:
 
-* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
-* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
+[![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on%20Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/komarutrpg)
+[![OFUSE](https://img.shields.io/badge/OFUSE-59B9C6?logo=ofuse&logoColor=white)](https://ofuse.me/o?uid=99781)
 
 Giving this repository a **Star ⭐** is also a wonderful way to support this project!
