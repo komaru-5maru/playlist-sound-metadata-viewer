@@ -7,8 +7,8 @@ test.describe('Foundry VTT Check', () => {
   test('Should detect Foundry World or Login screen', async ({ page }) => {
     await page.goto(FOUNDRY_URL);
 
-    // タイトルが "Foundry VTT" または ワールド名 "ek01" を含んでいるか確認
-    await expect(page).toHaveTitle(/(Foundry VTT|ek01)/);
+    // タイトルが "Foundry VTT" を含んでいるか確認
+    await expect(page).toHaveTitle(/(Foundry VTT)/);
 
     // ログイン済みなら #interface (サイドバーなど) があるはず、
     // 未ログインなら select[name="userid"] があるはず。
