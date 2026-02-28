@@ -1,11 +1,11 @@
-* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
-* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
+# Playlist Sound Metadata Viewer
 
 <p align="center">
   <img src="Github_Social_Preview.jpg" alt="Playlist Sound Metadata Viewer" width="600">
 </p>
 
-# Playlist Sound Metadata Viewer
+* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
+* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
 
 Hi, I'm Komaru, a TRPG enthusiast and developer.
 I create modules to make our sessions more enjoyable!
