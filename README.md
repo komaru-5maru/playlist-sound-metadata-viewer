@@ -1,3 +1,6 @@
+* **OFUSE**: [https://ofuse.me/o?uid=99781](https://ofuse.me/o?uid=99781)
+* **Buy Me a Coffee (Ko-fi)**: [https://ko-fi.com/komarutrpg](https://ko-fi.com/komarutrpg)
+
 <p align="center">
   <img src="Github_Social_Preview.jpg" alt="Playlist Sound Metadata Viewer" width="600">
 </p>
