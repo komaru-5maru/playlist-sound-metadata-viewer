@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog.
 
+## [2.2.0] - 2026-02-28
+
+### Changed
+* Updated module version to 2.2.0 to verify the update notification system in Foundry VTT v13.
+* Maintained full compatibility with Node.js and ApplicationV2 architecture.
+
+### 変更 (Japanese)
+* Foundry VTT v13 におけるアップデート通知機能の動作確認のため、モジュールバージョンを 2.2.0 に更新。
+* Node.js 版および ApplicationV2 アーキテクチャとの完全な互換性を維持。
+
 ## [2.1.9] - 2026-02-28
 
 ### Added

@@ -34,9 +34,10 @@ Foundry VTTの設定画面から **「モジュール管理（アドオン・モ
 ## Recent Changes
 Full history is available in `CHANGELOG.md`.
 
-### v2.1.9
-* **[Internal]** Updated project structure and CI/CD pipeline for Foundry VTT v13.
-* **[Fixed]** Optimized library loading and manifest path resolution.
+### [2.2.0] - 2026-02-28
+
+* Updated module version to 2.2.0 to verify the update notification system in Foundry VTT v13.
+* Maintained full compatibility with Node.js and ApplicationV2 architecture.
 
 ---
 
@@ -62,6 +63,7 @@ Full history is available in `CHANGELOG.md`.
 ## 最近の更新
 詳細な履歴は `CHANGELOG.md` を参照してください。
 
-### v2.1.9
-* **[内部更新]** Foundry VTT v13向けのプロジェクト構成とCI/CDパイプラインを最適化。
-* **[修正]** ライブラリの読み込み処理とマニフェストパスの解決を修正。
+### [2.2.0] - 2026-02-28
+
+* Foundry VTT v13 におけるアップデート通知機能の動作確認のため、モジュールバージョンを 2.2.0 に更新。
+* Node.js 版および ApplicationV2 アーキテクチャとの完全な互換性を維持。

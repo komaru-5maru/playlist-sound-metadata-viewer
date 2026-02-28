@@ -47,7 +47,7 @@ describe('Module Structure Check', () => {
         const tag = process.env.GITHUB_REF_NAME;
 
         if (tag && tag.startsWith('v')) {
-            const expectedVersion = tag.replace('v', ''); // 'v2.1.9' -> '2.1.9'
+            const expectedVersion = tag.replace('v', ''); 
             expect(moduleJson.version, `タグは ${tag} ですが、module.json の version は ${moduleJson.version} のままです！`).toBe(expectedVersion);
         }
     });
